@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Web Automation Testing on Windows Controller" parallel="tests" thread-count="15" verbose="5">
+  <listeners>
+        <listener class-name="testautomation.listeners.TestListener"/>
+        <listener class-name="testautomation.listeners.AnnotationTransformer"/>
+    </listeners>
+  
+  
+   <test name="Test on Chrome" preserve-order="false">
+  <parameter name="Device" value="Chrome"/>
+  <parameter name="URL" value="http://hsshitstweb01/ekundu/"/>
+
+  <classes>
+    <class name="steps.Assessment"/>
+    </classes> 
+  </test> 
+ 
+</suite>
